@@ -1,0 +1,214 @@
+####################################################################
+# CWM Configuration File
+####################################################################
+####################################################################
+# Automatically add new windows to the current group
+sticky yes
+####################################################################
+# Snap windows to edges at 4 pixels distance
+snapdist 4
+####################################################################
+# Gaps
+gap 40 10 10 10
+
+borderwidth 1
+####################################################################
+# Colors
+color    inactiveborder  "#282828"
+color    activeborder "#fbf1c7"
+####################################################################
+# Set font for menus
+fontname "Noto Sans Mono:size=11"
+####################################################################
+#Remove all default keybindings
+unbind-key all
+####################################################################
+# KEYBINDINGS:
+# 4 = mod (windows key)
+# S = shift
+# C = control
+# M = meta (alt)
+####################################################################
+# Hide window
+bind-key 4-BackSpace window-hide
+####################################################################
+# Lower window's focus
+bind-key 4-Down window-lower
+
+# Raise window's focus
+bind-key 4-Up window-raise
+####################################################################
+# Cycle through current windows
+bind-key 4-Tab window-cycle
+
+# Cycle through current windows - reverse
+bind-key 4S-Tab window-rcycle
+####################################################################
+# Quit window
+bind-key 4-q window-close
+bind-key 4S-q window-close
+####################################################################
+# Restart cwm, reloading configuration
+bind-key 4S-r restart
+####################################################################
+# Show only windows for group $N
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+####################################################################
+# Move window to group $N
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-4 window-movetogroup-4
+bind-key 4S-5 window-movetogroup-5
+bind-key 4S-6 window-movetogroup-6
+bind-key 4S-7 window-movetogroup-7
+bind-key 4S-8 window-movetogroup-8
+bind-key 4S-9 window-movetogroup-9
+####################################################################
+#Toggle showing windows from all groups
+bind-key 4-a group-toggle-all
+
+#Toggle current window's group membership
+bind-key 4-g window-group
+####################################################################
+#Cycle through the window groups
+bind-key 4-Right group-cycle
+
+#Cycle through the window groups - reverse 
+bind-key 4-Left group-rcycle
+####################################################################
+#Stick current window to be visible in all groups
+bind-key 4S-s window-stick
+####################################################################
+# Make current window fullscreen
+bind-key 4-f window-fullscreen
+
+# Maximize current window
+bind-key 4-m window-maximize
+####################################################################
+# Maximize window in vertical direction only
+bind-key 4-equal window-vmaximize
+
+# Maximize window in horizontal direction only
+bind-key 4S-equal window-hmaximize
+####################################################################
+# Move window left, down, up, right 10 pixels
+bind-key 4-h window-move-left-big
+bind-key 4-j window-move-down-big
+bind-key 4-k window-move-up-big
+bind-key 4-l window-move-right-big
+####################################################################
+# Resize window left, down, up, right by 10 pixels
+bind-key 4S-h window-resize-left-big
+bind-key 4S-j window-resize-down-big
+bind-key 4S-k window-resize-up-big
+bind-key 4S-l window-resize-right-big
+####################################################################
+# Tile windows vertically, current window to the left
+bind-key 4-d window-vtile
+
+# Tile windows horizontally, current window to the top
+bind-key 4-s window-htile
+####################################################################
+#MOUSE
+# Unbind default mouse actions
+unbind-mouse M-1
+unbind-mouse CM-1
+unbind-mouse M-2
+unbind-mouse M-3
+unbind-mouse CMS-3
+
+# Move window with mouse
+bind-mouse 4-1 window-move
+
+# Resize window with mouse
+bind-mouse 4-3 window-resize
+
+# Lower window's focus with mouse
+bind-mouse 4-2 window-lower
+
+# Hide window with mouse
+bind-mouse 4S-2 window-hide
+#####################################################################
+#Autogroup definitions
+
+
+
+#####################################################################
+# Command Menu
+# Apps that will be in the righ click command menu
+command File Manager thunar
+command Terminal termite
+command Broswer firefox
+
+#Command Menu  
+color menubg "#404552"
+color menufg "#6BA4E7"
+color font   "#FFFFFF"
+
+
+
+
+
+
+#####################################################################
+Additional Moving 
+
+#Snap window to top edge.
+bind-key CM window-snap-up
+ 
+#Snap window to bottom edge.
+bindkey window-snap-down
+
+#Snap window to right edge.
+window-snap-right
+
+#Snap window to left edge.  
+window-snap-left
+
+#Snap window to top-right corner.
+window-snap-up-right
+
+#Snap window to top-left corner.    
+window-snap-up-left
+
+#Snap window to bottom-right corner.
+window-snap-down-right
+
+#Snap window to bottom-left corner.
+window-snap-down-left
+
+####################################################################
+#Move pointer moveamount pixels up.    
+pointer-move-up
+
+#Move pointer moveamount pixels down.
+pointer-move-down
+   
+#Move pointer moveamount pixels right.
+pointer-move-right
+   
+#Move pointer moveamount pixels left.
+pointer-move-left
+
+#Move pointer 10 times moveamount pixels up.
+pointer-move-up-big
+
+#Move pointer 10 times moveamount pixels down.
+pointer-move-down-big
+    
+
+#Move pointer 10 times moveamount pixels right.
+pointer-move-right-big
+
+Move pointer 10 times moveamount pixels left.
+pointer-move-left-big
+    
