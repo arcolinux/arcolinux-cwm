@@ -1,33 +1,83 @@
 ####################################################################
 # CWM Configuration File
 ####################################################################
+
+
 ####################################################################
+# Layout Settings
+####################################################################
+# Gaps - Leave room at the top or bottom for status bar
+#If using one polybar - if using a second polybar set to 40 40 10 10
+gap 40 40 10 10
+
+#Font
+fontname "Noto Sans Mono:size=11"
+
+#Width of border around window
+borderwidth 2
+
+# Border Colors
+color   activeborder		"#6BA4E7"
+#color 	urgencyboard
+#color   inactiveborder			
+color 	groupborder			
+color 	ungroupboarder		
+
+#Size of keyboard window movement - pixel
+moveamount 10
+
+#Distance to snap to adjacent edge
+snapdist 5
+
+#Applications that cwm will ignore for groups and borders
+ignore dmenu
+ignore polybar
+ 
+#####################################################################
 # Automatically add new windows to the current group
 sticky yes
-####################################################################
-# Snap windows to edges at 4 pixels distance
-snapdist 4
-####################################################################
-# Gaps
-gap 40 10 10 10
+#####################################################################
+#Autogroup definitions
+autogroup 1
+autogroup 2
+autogroup 3
+autogroup 4
+autogroup 5
+autogroup 6
+autogroup 7
+autogroup 8
+autogroup 9
 
-borderwidth 1
+#####################################################################
+# Command Menu - Apps that will be in the righ click command menu
+color menubg 	"#404552"
+color menufg 	"#6BA4E7"
+color font      "#FFFFFF"
+color selfont	"#FFFFFF"
+
+# Add the applications you want to appear in the right click menu
+command File Manager thunar
+command Terminal termite
+command Broswer firefox
+command Arcolinux-Tweak-Tool arcolinux-tweak-tool
+command Arcolinux-Welcome-App arcolinux-welcome-app
+command Arcolinux-Logout arcolinux-logout
 ####################################################################
-# Colors
-color    inactiveborder  "#282828"
-color    activeborder "#fbf1c7"
-####################################################################
-# Set font for menus
-fontname "Noto Sans Mono:size=11"
-####################################################################
-#Remove all default keybindings
-unbind-key all
+
+
+
 ####################################################################
 # KEYBINDINGS:
 # 4 = mod (windows key)
 # S = shift
 # C = control
 # M = meta (alt)
+####################################################################
+#Remove all default keybindings
+unbind-key all
+####################################################################
+bind-key 4-KP_Up window-close
+bind-key 4-KP_88 window-close
 ####################################################################
 # Hide window
 bind-key 4-BackSpace window-hide
@@ -119,12 +169,8 @@ bind-key 4-d window-vtile
 bind-key 4-s window-htile
 ####################################################################
 #MOUSE
-# Unbind default mouse actions
-unbind-mouse M-1
-unbind-mouse CM-1
-unbind-mouse M-2
-unbind-mouse M-3
-unbind-mouse CMS-3
+# Unbind default mouse actions - This removes the right click menu - Mouse binds will still work
+#unbind-mouse all 
 
 # Move window with mouse
 bind-mouse 4-1 window-move
@@ -137,78 +183,7 @@ bind-mouse 4-2 window-lower
 
 # Hide window with mouse
 bind-mouse 4S-2 window-hide
-#####################################################################
-#Autogroup definitions
-
-
-
-#####################################################################
-# Command Menu
-# Apps that will be in the righ click command menu
-command File Manager thunar
-command Terminal termite
-command Broswer firefox
-
-#Command Menu  
-color menubg "#404552"
-color menufg "#6BA4E7"
-color font   "#FFFFFF"
 
 
 
 
-
-
-#####################################################################
-Additional Moving 
-
-#Snap window to top edge.
-bind-key CM window-snap-up
- 
-#Snap window to bottom edge.
-bindkey window-snap-down
-
-#Snap window to right edge.
-window-snap-right
-
-#Snap window to left edge.  
-window-snap-left
-
-#Snap window to top-right corner.
-window-snap-up-right
-
-#Snap window to top-left corner.    
-window-snap-up-left
-
-#Snap window to bottom-right corner.
-window-snap-down-right
-
-#Snap window to bottom-left corner.
-window-snap-down-left
-
-####################################################################
-#Move pointer moveamount pixels up.    
-pointer-move-up
-
-#Move pointer moveamount pixels down.
-pointer-move-down
-   
-#Move pointer moveamount pixels right.
-pointer-move-right
-   
-#Move pointer moveamount pixels left.
-pointer-move-left
-
-#Move pointer 10 times moveamount pixels up.
-pointer-move-up-big
-
-#Move pointer 10 times moveamount pixels down.
-pointer-move-down-big
-    
-
-#Move pointer 10 times moveamount pixels right.
-pointer-move-right-big
-
-Move pointer 10 times moveamount pixels left.
-pointer-move-left-big
-    
