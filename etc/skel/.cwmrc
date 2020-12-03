@@ -32,23 +32,7 @@ snapdist 5
 #Applications that cwm will ignore for groups and borders
 ignore dmenu
 ignore polybar
- 
-#####################################################################
-# Automatically add new windows to the current group
-sticky yes
-#####################################################################
-#Autogroup definitions
-autogroup 1
-autogroup 2
-autogroup 3
-autogroup 4
-autogroup 5
-autogroup 6
-autogroup 7
-autogroup 8
-autogroup 9
 
-#####################################################################
 # Command Menu - Apps that will be in the righ click command menu
 color menubg 	"#404552"
 color menufg 	"#6BA4E7"
@@ -62,10 +46,27 @@ command Broswer firefox
 command Arcolinux-Tweak-Tool arcolinux-tweak-tool
 command Arcolinux-Welcome-App arcolinux-welcome-app
 command Arcolinux-Logout arcolinux-logout
+
+
+
+#####################################################################
+
+
+
+
+#Autogroup definitions
+autogroup 1
+autogroup 2
+autogroup 3
+autogroup 4
+autogroup 5
+autogroup 6
+autogroup 7
+autogroup 8
+autogroup 9
+
 ####################################################################
-
-
-
+# Keyboard Keybinding
 ####################################################################
 # KEYBINDINGS:
 # 4 = mod (windows key)
@@ -73,102 +74,146 @@ command Arcolinux-Logout arcolinux-logout
 # C = control
 # M = meta (alt)
 ####################################################################
-#Remove all default keybindings
+# Remove all default keybindings
 unbind-key all
-####################################################################
-bind-key 4-KP_Up window-close
-bind-key 4-KP_88 window-close
-####################################################################
+
+# Close Window
+bind-key 4-q window-close
+bind-key 4s-q window-close
+
 # Hide window
 bind-key 4-BackSpace window-hide
-####################################################################
+
 # Lower window's focus
 bind-key 4-Down window-lower
 
 # Raise window's focus
 bind-key 4-Up window-raise
-####################################################################
+
 # Cycle through current windows
 bind-key 4-Tab window-cycle
 
 # Cycle through current windows - reverse
 bind-key 4S-Tab window-rcycle
-####################################################################
-# Quit window
-bind-key 4-q window-close
-bind-key 4S-q window-close
-####################################################################
-# Restart cwm, reloading configuration
-bind-key 4S-r restart
-####################################################################
-# Show only windows for group $N
-bind-key 4-1 group-only-1
-bind-key 4-2 group-only-2
-bind-key 4-3 group-only-3
-bind-key 4-4 group-only-4
-bind-key 4-5 group-only-5
-bind-key 4-6 group-only-6
-bind-key 4-7 group-only-7
-bind-key 4-8 group-only-8
-bind-key 4-9 group-only-9
-####################################################################
-# Move window to group $N
-bind-key 4S-1 window-movetogroup-1
-bind-key 4S-2 window-movetogroup-2
-bind-key 4S-3 window-movetogroup-3
-bind-key 4S-4 window-movetogroup-4
-bind-key 4S-5 window-movetogroup-5
-bind-key 4S-6 window-movetogroup-6
-bind-key 4S-7 window-movetogroup-7
-bind-key 4S-8 window-movetogroup-8
-bind-key 4S-9 window-movetogroup-9
-####################################################################
-#Toggle showing windows from all groups
-bind-key 4-a group-toggle-all
 
-#Toggle current window's group membership
-bind-key 4-g window-group
-####################################################################
-#Cycle through the window groups
-bind-key 4-Right group-cycle
-
-#Cycle through the window groups - reverse 
-bind-key 4-Left group-rcycle
-####################################################################
-#Stick current window to be visible in all groups
-bind-key 4S-s window-stick
-####################################################################
 # Make current window fullscreen
 bind-key 4-f window-fullscreen
 
 # Maximize current window
 bind-key 4-m window-maximize
+
+# Restart cwm, reloading configuration
+bind-key 4S-r restart
+
+####################################################################
+# Group Keybinding
+####################################################################
+# Show only windows for group $N
+bind-key 4-1 group-only-1
+
+bind-key 4-2 group-only-2
+
+bind-key 4-3 group-only-3
+
+bind-key 4-4 group-only-4
+
+bind-key 4-5 group-only-5
+
+bind-key 4-6 group-only-6
+
+bind-key 4-7 group-only-7
+
+bind-key 4-8 group-only-8
+
+bind-key 4-9 group-only-9
+
+# Move window to group $N
+bind-key 4S-1 window-movetogroup-1
+
+bind-key 4S-2 window-movetogroup-2
+
+bind-key 4S-3 window-movetogroup-3
+
+bind-key 4S-4 window-movetogroup-4
+
+bind-key 4S-5 window-movetogroup-5
+
+bind-key 4S-6 window-movetogroup-6
+
+bind-key 4S-7 window-movetogroup-7
+
+bind-key 4S-8 window-movetogroup-8
+
+bind-key 4S-9 window-movetogroup-9
+
+####################################################################
+# Toggle showing windows from all groups
+bind-key 4-a group-toggle-all
+
+# Toggle current window's group membership
+bind-key 4-g window-group
+
+# Cycle through the window groups
+bind-key 4-Right group-cycle
+
+# Cycle through the window groups - reverse 
+bind-key 4-Left group-rcycle
+
+# Stick current window to be visible in all groups
+bind-key 4S-s window-stick
+
+# Automatically add new windows to the current group
+sticky yes
+####################################################################
+
+
+####################################################################
+# Tiling Keybinding
 ####################################################################
 # Maximize window in vertical direction only
-bind-key 4-equal window-vmaximize
+bind-key 4C-v window-vmaximize
 
 # Maximize window in horizontal direction only
-bind-key 4S-equal window-hmaximize
-####################################################################
-# Move window left, down, up, right 10 pixels
-bind-key 4-h window-move-left-big
-bind-key 4-j window-move-down-big
-bind-key 4-k window-move-up-big
-bind-key 4-l window-move-right-big
-####################################################################
-# Resize window left, down, up, right by 10 pixels
-bind-key 4S-h window-resize-left-big
-bind-key 4S-j window-resize-down-big
-bind-key 4S-k window-resize-up-big
-bind-key 4S-l window-resize-right-big
-####################################################################
+bind-key 4C-h window-hmaximize
+
 # Tile windows vertically, current window to the left
 bind-key 4-d window-vtile
 
 # Tile windows horizontally, current window to the top
 bind-key 4-s window-htile
+
 ####################################################################
-#MOUSE
+# Move and Reszie Keybindings
+####################################################################
+# Move window left, down, up, right 10 pixels
+#Move window to left 
+bind-key 4-h window-move-left-big
+
+# Move window down 
+bind-key 4-j window-move-down-big
+
+# Move window up
+bind-key 4-k window-move-up-big
+
+# Move window to right 
+bind-key 4-l window-move-right-big
+
+# Resize window left, down, up, right by 10 pixels
+# Resize window to the left
+bind-key 4S-h window-resize-left-big
+
+# Resize window downward
+bind-key 4S-j window-resize-down-big
+
+# Resize window to the upward
+bind-key 4S-k window-resize-up-big
+
+# Resize window to the right
+bind-key 4S-l window-resize-right-big
+
+####################################################################
+# MOUSE Keybindings
+####################################################################
 # Unbind default mouse actions - This removes the right click menu - Mouse binds will still work
 #unbind-mouse all 
 
