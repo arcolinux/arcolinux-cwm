@@ -2,36 +2,42 @@
 # CWM Configuration File
 ####################################################################
 
-
 ####################################################################
 # Layout Settings
 ####################################################################
 # Gaps - Leave room at the top or bottom for status bar
-#If using one polybar - if using a second polybar set to 40 40 10 10
+#If using one polybar 40 10 10 10 - if using a second polybar set to 40 40 10 10
 gap 40 40 10 10
 
-#Font
+# Font
 fontname "Noto Sans Mono:size=11"
 
-#Width of border around window
+# Width of border around window
 borderwidth 2
 
 # Border Colors
-color   activeborder		"#6BA4E7"
-#color 	urgencyboard
-#color   inactiveborder			
-color 	groupborder			
-color 	ungroupboarder		
+color   activeborder		"#6790EB"
+color 	urgencyboard		"#dd2727"
+color  inactiveborder		"#f3f4f5"	
+color 	groupborder			"#d18034"
+color 	ungroupboarder		"#d13436"
 
-#Size of keyboard window movement - pixel
+# Size of keyboard window movement - pixel
 moveamount 10
 
-#Distance to snap to adjacent edge
+# Distance to snap to adjacent edge
 snapdist 5
 
-#Applications that cwm will ignore for groups and borders
+# Percent of screen master should occupy with htile
+htile 50
+
+#Percent of screen master should occupy with vtile
+vtile 50
+
+# Applications that cwm will ignore for groups and borders
 ignore dmenu
 ignore polybar
+ignore conky
 
 # Command Menu - Apps that will be in the righ click command menu
 color menubg 	"#404552"
@@ -40,30 +46,12 @@ color font      "#FFFFFF"
 color selfont	"#FFFFFF"
 
 # Add the applications you want to appear in the right click menu
-command File Manager thunar
-command Terminal termite
-command Broswer firefox
-command Arcolinux-Tweak-Tool arcolinux-tweak-tool
-command Arcolinux-Welcome-App arcolinux-welcome-app
-command Arcolinux-Logout arcolinux-logout
-
-
-
-#####################################################################
-
-
-
-
-#Autogroup definitions
-autogroup 1
-autogroup 2
-autogroup 3
-autogroup 4
-autogroup 5
-autogroup 6
-autogroup 7
-autogroup 8
-autogroup 9
+command File Manager 			thunar
+command Terminal 				termite
+command Browser 				firefox
+command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
+command Arcolinux-Welcome-App 	arcolinux-welcome-app
+command Arcolinux-Logout 		arcolinux-logout
 
 ####################################################################
 # Keyboard Keybinding
@@ -79,16 +67,16 @@ unbind-key all
 
 # Close Window
 bind-key 4-q window-close
-bind-key 4s-q window-close
+bind-key 4S-q window-close
 
 # Hide window
 bind-key 4-BackSpace window-hide
 
 # Lower window's focus
-bind-key 4-Down window-lower
+#bind-key 4-Down window-lower
 
 # Raise window's focus
-bind-key 4-Up window-raise
+#bind-key 4-Up window-raise
 
 # Cycle through current windows
 bind-key 4-Tab window-cycle
@@ -104,49 +92,68 @@ bind-key 4-m window-maximize
 
 # Restart cwm, reloading configuration
 bind-key 4S-r restart
+    
+####################################################################
+# Autogroup & Group Keybinding
+#####################################################################
+# Automatically add new windows to the current group
+sticky yes
 
-####################################################################
-# Group Keybinding
-####################################################################
+#Autogroup definitions
+autogroup 1 
+autogroup 2 
+autogroup 3 
+autogroup 4 
+autogroup 5 
+autogroup 6 
+autogroup 7 
+autogroup 8 
+autogroup 9 
+
 # Show only windows for group $N
 bind-key 4-1 group-only-1
-
 bind-key 4-2 group-only-2
-
 bind-key 4-3 group-only-3
-
 bind-key 4-4 group-only-4
-
 bind-key 4-5 group-only-5
-
 bind-key 4-6 group-only-6
-
 bind-key 4-7 group-only-7
-
 bind-key 4-8 group-only-8
-
 bind-key 4-9 group-only-9
 
 # Move window to group $N
 bind-key 4S-1 window-movetogroup-1
-
 bind-key 4S-2 window-movetogroup-2
-
 bind-key 4S-3 window-movetogroup-3
-
 bind-key 4S-4 window-movetogroup-4
-
 bind-key 4S-5 window-movetogroup-5
-
 bind-key 4S-6 window-movetogroup-6
-
 bind-key 4S-7 window-movetogroup-7
-
 bind-key 4S-8 window-movetogroup-8
-
 bind-key 4S-9 window-movetogroup-9
 
-####################################################################
+# Toggle visibility of group $N
+bind-key 4-1 group-toggle-1
+bind-key 4-2 group-toggle-2
+bind-key 4-3 group-toggle-3
+bind-key 4-4 group-toggle-4
+bind-key 4-5 group-toggle-5
+bind-key 4-6 group-toggle-6
+bind-key 4-7 group-toggle-7
+bind-key 4-8 group-toggle-8
+bind-key 4-9 group-toggle-9
+
+# Close all windows in group $N
+bind-key 4-1 group-close-1
+bind-key 4-2 group-close-2
+bind-key 4-3 group-close-3
+bind-key 4-4 group-close-4
+bind-key 4-5 group-close-5
+bind-key 4-6 group-close-6
+bind-key 4-7 group-close-7
+bind-key 4-8 group-close-8
+bind-key 4-9 group-close-9
+
 # Toggle showing windows from all groups
 bind-key 4-a group-toggle-all
 
@@ -154,18 +161,19 @@ bind-key 4-a group-toggle-all
 bind-key 4-g window-group
 
 # Cycle through the window groups
-bind-key 4-Right group-cycle
+bind-key 4C-Tab group-cycle
 
 # Cycle through the window groups - reverse 
-bind-key 4-Left group-rcycle
+bind-key 4M-Tab group-rcycle
+
+# Forward cycle through windows in current group
+bind-key C-Tab	window-cycle-ingroup
+
+# Reverse cycle through windows in current group
+ bind-key M-Tab	window-rcycle-ingroup
 
 # Stick current window to be visible in all groups
-bind-key 4S-s window-stick
-
-# Automatically add new windows to the current group
-sticky yes
-####################################################################
-
+bind-key 4C-S	window-stick
 
 ####################################################################
 # Tiling Keybinding
@@ -183,32 +191,58 @@ bind-key 4-d window-vtile
 bind-key 4-s window-htile
 
 ####################################################################
-# Move and Reszie Keybindings
+# Move Window Keybindings
 ####################################################################
-# Move window left, down, up, right 10 pixels
-#Move window to left 
+# Move window to left
+bind-key 4-Left window-move-left
+
+# Move window to down
+bind-key 4-Down window-move-down
+
+# Move window to up
+bind-key 4-Up window-move-up
+
+# Move window to right
+bind-key 4-Right window-move-right
+
+# Move window to left by 10 pixels 
+bind-key 4C-Left window-move-left-big
+
+# Move window down by 10 pixels
+bind-key 4C-Down window-move-down-big
+
+# Move window up by 10 pixels
+bind-key 4C-Up window-move-up-big
+
+# Move window to right by 10 pixelsP
+bind-key 4C-Right window-move-right-big
+
+####################################################################
+# Reszie Window Keybindings
+####################################################################
+
+# Move window to left by 10 pixels 
 bind-key 4-h window-move-left-big
 
-# Move window down 
+# Move window down by 10 pixels
 bind-key 4-j window-move-down-big
 
-# Move window up
+# Move window up by 10 pixels
 bind-key 4-k window-move-up-big
 
-# Move window to right 
+# Move window to right by 10 pixelsP
 bind-key 4-l window-move-right-big
 
-# Resize window left, down, up, right by 10 pixels
-# Resize window to the left
+# Resize window to the left by 10 pixels
 bind-key 4S-h window-resize-left-big
 
-# Resize window downward
+# Resize window downward by 10 pixels
 bind-key 4S-j window-resize-down-big
 
-# Resize window to the upward
+# Resize window to the upward by 10 pixels
 bind-key 4S-k window-resize-up-big
 
-# Resize window to the right
+# Resize window to the right by 10 pixels
 bind-key 4S-l window-resize-right-big
 
 ####################################################################
@@ -229,6 +263,31 @@ bind-mouse 4-2 window-lower
 # Hide window with mouse
 bind-mouse 4S-2 window-hide
 
+####################################################################
+# FOR AZERTY USERS!!
+####################################################################
+# Change keyboard layout 
+bind-key M-u setxkbmap us
+bind-key M-e setxkbmap be
 
+bind-key M-ampersand        group-only-1
+bind-key M-eacute           group-only-2
+bind-key M-quotedbl         group-only-3
+bind-key M-apostrophe       group-only-4
+bind-key M-parenleft        group-only-5
+bind-key M-minus            group-only-6
+bind-key M-egrave           group-only-7
+bind-key M-underscore       group-only-8
+bind-key M-ccedilla         group-only-9
+
+bind-key MS-ampersand        window-movetogroup-1
+bind-key MS-eacute           window-movetogroup-2
+bind-key MS-quotedbl         window-movetogroup-3
+bind-key MS-apostrophe       window-movetogroup-4
+bind-key MS-parenleft        window-movetogroup-5
+bind-key MS-minus            window-movetogroup-6
+bind-key MS-egrave           window-movetogroup-7
+bind-key MS-underscore       window-movetogroup-8
+bind-key MS-ccedilla         window-movetogroup-9
 
 
