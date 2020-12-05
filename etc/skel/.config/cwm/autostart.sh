@@ -29,11 +29,8 @@ volumeicon &
 sxhkd -c ~/.config/cwm/sxhkd/sxhkdrc &
 conky -c $HOME/.config/cwm/system-overview &
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-#qobbar -c $HOME/.config/qobbar/qobbar.conf &
 $HOME/.config/polybar/launch.sh &
-#run applications from startup
 #run "insync start"
 #run "spotify"
-#run "ckb-next -b"
 #discord &
 #telegram-desktop &

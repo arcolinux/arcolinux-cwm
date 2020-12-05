@@ -83,8 +83,8 @@ super + r
     rofi-theme-selector
 
 #Urxvt
-#super + t
-#    urxvt
+super + t
+    urxvt
 
 #Pavucontrol
 super + v
@@ -386,4 +386,4 @@ XF86MonBrightnessDown
 
 #Picom Toggle
 ctrl + alt + o
-    ~/.config/arco-dwm/scripts/picom-toggle.sh
+    ~/.config/cwm/scripts/picom-toggle.sh
