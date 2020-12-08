@@ -29,7 +29,7 @@ volumeicon &
 sxhkd -c ~/.config/cwm/sxhkd/sxhkdrc &
 conky -c $HOME/.config/cwm/system-overview &
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-sleep 3
+sleep 5
 $HOME/.config/polybar/launch.sh &
 #run "insync start"
 #run "spotify"
