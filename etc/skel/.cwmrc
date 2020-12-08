@@ -17,10 +17,10 @@ borderwidth 2
 
 # Border Colors
 color   activeborder		"#6790EB"
-color 	urgencyboard		"#dd2727"
-color  inactiveborder		"#f3f4f5"	
+color 	urgencyborder 		"#dd2727"
+color   inactiveborder		"#f3f4f5"	
 color 	groupborder			"#d18034"
-color 	ungroupboarder		"#d13436"
+color 	ungroupborder		"#d13436"
 
 # Size of keyboard window movement - pixel
 moveamount 10
@@ -100,15 +100,15 @@ bind-key 4S-r restart
 sticky yes
 
 #Autogroup definitions
-autogroup 1 
-autogroup 2 
-autogroup 3 
-autogroup 4 
-autogroup 5 
-autogroup 6 
-autogroup 7 
-autogroup 8 
-autogroup 9 
+#autogroup 1 
+#autogroup 2 
+#autogroup 3 
+#autogroup 4 
+#autogroup 5 
+#autogroup 6 
+#autogroup 7 
+#autogroup 8 
+#autogroup 9 
 
 # Show only windows for group $N
 bind-key 4-1 group-only-1

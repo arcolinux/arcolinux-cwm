@@ -1,1 +1,1 @@
-# Cwm Configuration folder
+ ArcoLinux cwm desktop settings
