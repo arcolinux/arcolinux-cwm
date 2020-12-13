@@ -16,6 +16,10 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
 #run xrandr --output HDMI2 --right-of HDMI1 --auto
 
+#polybar
+#we launch polybar from this script /usr/local/bin/cwm-polybar.sh
+#we look for the config in ~/.config/polybar/launch.sh
+
 nm-applet &
 pamac-tray &
 variety &
@@ -29,7 +33,7 @@ volumeicon &
 sxhkd -c ~/.config/cwm/sxhkd/sxhkdrc &
 conky -c $HOME/.config/cwm/system-overview &
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-$HOME/.config/polybar/launch.sh &
+
 #run "insync start"
 #run spotify &
 #run discord &
