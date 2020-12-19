@@ -48,7 +48,7 @@ color selfont	"#FFFFFF"
 # Add the applications you want to appear in the right click menu
 command FileManager 			thunar
 command Terminal 				termite
-command Browser 				exo
+command Browser 				exo-open --launch WebBrowser
 command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
 command Arcolinux-Welcome-App 	arcolinux-welcome-app
 command Arcolinux-Logout 		arcolinux-logout
