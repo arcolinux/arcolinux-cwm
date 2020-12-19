@@ -6,6 +6,7 @@ function run {
     $@&
   fi
 }
+
 run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run "xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal"
 #run "xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off"
@@ -15,10 +16,6 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run xrandr --output DVI-1 --right-of DVI-0 --auto
 #run xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
 #run xrandr --output HDMI2 --right-of HDMI1 --auto
-
-#polybar
-#we launch polybar from this script /usr/local/bin/cwm-polybar.sh
-#we look for the config in ~/.config/polybar/launch.sh
 
 nm-applet &
 pamac-tray &
@@ -38,3 +35,6 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run spotify &
 #run discord &
 #run telegram-desktop &
+
+#run polybar
+sh ~/.config/polybar/launch.sh &
