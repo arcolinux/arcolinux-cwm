@@ -37,4 +37,4 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run telegram-desktop &
 
 #run polybar
-sleep 5 & sh ~/.config/polybar/launch.sh &
+sleep 5 && sh ~/.config/polybar/launch.sh &
