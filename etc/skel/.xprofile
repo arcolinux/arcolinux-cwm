@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ $DESKTOP_SESSION = 'cwm' ]; then
+	homedir=$(echo $HOME)
+	sh $homedir/.config/cwm/autostart.sh
+fi
