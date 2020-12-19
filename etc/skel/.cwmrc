@@ -48,7 +48,7 @@ color selfont	"#FFFFFF"
 # Add the applications you want to appear in the right click menu
 command File Manager 			thunar
 command Terminal 				termite
-command Browser 				firefox
+command Browser 				exo
 command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
 command Arcolinux-Welcome-App 	arcolinux-welcome-app
 command Arcolinux-Logout 		arcolinux-logout
@@ -155,10 +155,10 @@ bind-key 4M-8 group-close-8
 bind-key 4M-9 group-close-9
 
 # Toggle showing windows from all groups
-bind-key 4-a group-toggle-all
+bind-key 4-g group-toggle-all
 
 # Toggle current window's group membership
-bind-key 4-g window-group
+bind-key 4C-g window-group
 
 # Cycle through the window groups
 bind-key 4C-Tab group-cycle
