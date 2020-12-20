@@ -6,14 +6,15 @@ process=$(pgrep -x polybar)
 
 
 while [ -z "$process" ] 
-do
 	sleep 1
+	process=$(pgrep -x polybar)
 done
 
 
 if [ -z "$process" ] && [ -z "$message" ] ; then
 	echo "No polybar and no error"
 else
+	sleep 1
 	arcolinux-restart-polybar	
 fi
 
