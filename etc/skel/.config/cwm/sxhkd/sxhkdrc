@@ -135,7 +135,7 @@ super + shift + s
 
 #arcolinux-welcome-app
 ctrl + alt + w
-     arcolinux-welcome-app
+    arcolinux-welcome-app
 
 #arcolinux-tweak-tool
 ctrl + alt + e
@@ -143,7 +143,7 @@ ctrl + alt + e
 
 #conky-rotate
 ctrl + alt + Next
-     conky-rotate -n
+    conky-rotate -n
 
 #conky-rotate
 ctrl + alt + Prior
@@ -151,11 +151,11 @@ ctrl + alt + Prior
 
 #File-Manager
 ctrl + alt + b
-     thunar
+    thunar
 
 #Catfish
 ctrl + alt + c
-     catfish
+    catfish
 
 #Chromium
 ctrl + alt + g
@@ -163,15 +163,15 @@ ctrl + alt + g
 
 #Firefox
 ctrl + alt + f
-     firefox
+    firefox
 
 #Nitrogen
 ctrl + alt + i
-     nitrogen
+    nitrogen
 
 #arcolinux-logout
 ctrl + alt + k
-     arcolinux-logout
+    arcolinux-logout
 
 #arcolinux-logout
 ctrl + alt + l
@@ -183,15 +183,15 @@ ctrl + alt + p
 
 #Xfce4-settings-manager
 ctrl + alt + m
-     xfce4-settings-manager
+    xfce4-settings-manager
 
 #Pulse Audio Control
 ctrl + alt + u
-     pavucontrol
+    pavucontrol
 
 #Rofi theme selector
 ctrl + alt + r
-  rofi-theme-selector
+  	rofi-theme-selector
 
 #Spotify
 ctrl + alt + s
@@ -199,7 +199,7 @@ ctrl + alt + s
 
 #Termite
 ctrl + alt + Return
-    termite
+	termite
 
 #termite
 ctrl + alt + t

@@ -33,10 +33,9 @@ volumeicon &
 sxhkd -c ~/.config/cwm/sxhkd/sxhkdrc &
 conky -c $HOME/.config/cwm/system-overview &
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-
-#run "insync start"
-#run spotify &
-#run discord &
-#run telegram-desktop &
+# insync start &
+# spotify &
+# discord &
+# telegram-desktop &
 
 sh ~/.config/cwm/scripts/check-polybar.sh &

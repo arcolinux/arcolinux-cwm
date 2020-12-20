@@ -7,7 +7,7 @@
 ####################################################################
 # Gaps - Leave room at the top or bottom for status bar
 #If using one polybar 40 10 10 10 - if using a second polybar set to 40 40 10 10
-gap 40 40 10 10
+gap 40 10 10 10
 
 # Font
 fontname "Noto Sans Mono:size=11"
