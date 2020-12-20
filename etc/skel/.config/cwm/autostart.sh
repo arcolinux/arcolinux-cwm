@@ -39,4 +39,4 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run discord &
 #run telegram-desktop &
 
-sh ~/.config/cwm/scripts/check-polybar.sh
+sh ~/.config/cwm/scripts/check-polybar.sh &

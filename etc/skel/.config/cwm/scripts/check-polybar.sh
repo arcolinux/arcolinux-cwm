@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 5
 message=$(cat ~/.xsession-errors | grep 'Disabling module "ewmh"')
 #echo $message
 process=$(pgrep -x polybar)
