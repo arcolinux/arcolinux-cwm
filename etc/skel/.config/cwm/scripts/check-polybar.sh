@@ -1,9 +1,17 @@
 #!/bin/bash
-sleep 5
 message=$(cat ~/.xsession-errors | grep 'Disabling module "ewmh"')
 #echo $message
 process=$(pgrep -x polybar)
 #echo $process
+
+
+while [ -z "$process"] 
+do
+	sleep 1
+	echo "sleep"
+done
+
+
 if [ -z "$process" ] && [ -z "$message" ] ; then
 	echo "No polybar and no error"
 else
