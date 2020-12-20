@@ -18,7 +18,7 @@ borderwidth 2
 # Border Colors
 color   activeborder		"#6790EB"
 color 	urgencyborder 		"#dd2727"
-color   inactiveborder		"#f3f4f5"	
+color   inactiveborder		"#686868"	
 color 	groupborder			"#d18034"
 color 	ungroupborder		"#d13436"
 
@@ -39,17 +39,17 @@ ignore dmenu
 ignore polybar
 ignore conky
 
-# Command Menu - Apps that will be in the righ click command menu
+# Command Menu - Apps that will be in the right click command menu
 color menubg 	"#404552"
-color menufg 	"#6BA4E7"
-color font      "#FFFFFF"
-color selfont	"#FFFFFF"
+color menufg 	"#6790EB"
+color font      "#cccccc"
+color selfont	"#ffffff"
 
 # Add the applications you want to appear in the right click menu
-command RestartPolybar			arcolinux-restart-polybar
 command FileManager 			thunar
 command Terminal 				termite
 command Browser 				'exo-open --launch WebBrowser'
+command RestartPolybar			arcolinux-restart-polybar
 command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
 command Arcolinux-Welcome-App 	arcolinux-welcome-app
 command Arcolinux-Logout 		arcolinux-logout
@@ -245,6 +245,18 @@ bind-key 4S-k window-resize-up-big
 
 # Resize window to the right by 10 pixels
 bind-key 4S-l window-resize-right-big
+
+# Resize window to the left by 10 pixels
+bind-key 4S-Left window-resize-left-big
+
+# Resize window downward by 10 pixels
+bind-key 4S-Down window-resize-down-big
+
+# Resize window to the upward by 10 pixels
+bind-key 4S-Up window-resize-up-big
+
+# Resize window to the right by 10 pixels
+bind-key 4S-Right window-resize-right-big
 
 ####################################################################
 # MOUSE Keybindings
