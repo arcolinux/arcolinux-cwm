@@ -219,7 +219,7 @@ bind-key 4C-Up window-move-up-big
 bind-key 4C-Right window-move-right-big
 
 ####################################################################
-# Reszie Window Keybindings
+# Resize Window Keybindings
 ####################################################################
 
 # Move window to left by 10 pixels 

@@ -5,7 +5,8 @@ process=$(pgrep -x polybar)
 #echo $process
 
 
-while [ -z "$process" ] 
+while [ -z "$process" ]
+do
 	sleep 1
 	process=$(pgrep -x polybar)
 done
