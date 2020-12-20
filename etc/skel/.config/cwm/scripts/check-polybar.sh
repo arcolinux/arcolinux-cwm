@@ -1,13 +1,11 @@
 #!/bin/bash
 
 message=$(cat ~/.xsession-errors | grep 'Disabling module "ewmh"')
-echo $message
-message=$(cat ~/.xsession-errors | grep WARNING)
-echo $message
-message=""
-
-
-if  pgrep -x "polybar" > /dev/null   &&  -z $message ; then
+#echo $message
+process=$(pgrep -x polybar)
+#echo $process
+if [ -z "$process" ] && [ -z "$message" ] ; then
+else
 	arcolinux-restart-polybar	
 fi
 
