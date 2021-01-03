@@ -49,7 +49,6 @@ color selfont	"#ffffff"
 command FileManager 			thunar
 command Terminal 				termite
 command Browser 				'exo-open --launch WebBrowser'
-command RestartPolybar			arcolinux-restart-polybar
 command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
 command Arcolinux-Welcome-App 	arcolinux-welcome-app
 command Arcolinux-Logout 		arcolinux-logout

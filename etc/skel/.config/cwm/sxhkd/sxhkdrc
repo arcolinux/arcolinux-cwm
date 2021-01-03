@@ -387,7 +387,3 @@ XF86MonBrightnessDown
 #Picom Toggle
 ctrl + alt + o
     ~/.config/cwm/scripts/picom-toggle.sh
-
-#reload polybar:
-super + shift + p
-	~/.config/polybar/launch.sh
