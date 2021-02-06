@@ -50,7 +50,8 @@ command FileManager 			thunar
 command Terminal 				termite
 command Browser 				'exo-open --launch WebBrowser'
 command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
-command Arcolinux-Welcome-App 	arcolinux-welcome-app
+command Arcolinux-Welcome-App   arcolinux-welcome-app
+command Restart polybar			arcolinux-restart-polybar
 command Arcolinux-Logout 		arcolinux-logout
 
 ####################################################################
