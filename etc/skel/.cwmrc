@@ -52,7 +52,7 @@ command Browser 				firefox
 command Archlinux-Tweak-Tool 	archlinux-tweak-tool
 command Arcolinux-Welcome-App   arcolinux-welcome-app
 command Restart-Polybar			arcolinux-restart-polybar
-command Arcolinux-Logout 		arcolinux-logout
+command Archlinux-Logout 		archlinux-logout
 
 ####################################################################
 # Keyboard Keybinding
