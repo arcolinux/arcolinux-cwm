@@ -49,7 +49,7 @@ color selfont	"#ffffff"
 command FileManager 			thunar
 command Terminal 				urxvt
 command Browser 				firefox
-command Arcolinux-Tweak-Tool 	arcolinux-tweak-tool
+command Archlinux-Tweak-Tool 	archlinux-tweak-tool
 command Arcolinux-Welcome-App   arcolinux-welcome-app
 command Restart-Polybar			arcolinux-restart-polybar
 command Arcolinux-Logout 		arcolinux-logout
